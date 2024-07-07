@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>calculator</title>
+    <style>
+      .calculator {
+        border: 2px solid rgb(192, 187, 187);
+        border-radius: 5px;
+        width: 280px;
+        background-color: bisque;
+        padding-left: 25px;
+
+        margin: 100px 600px;
+      }
+      .heading {
+        text-transform: uppercase;
+        color: cadetblue;
+        text-align: center;
+        padding-right: 7px;
+      }
+      #display {
+        margin: 10px;
+        font-size: 25px;
+        border-radius: 5px;
+        width: 80%;
+      }
+      .buttonClass {
+        background-color: aquamarine;
+        width: 20%;
+        border-radius: 10px;
+        margin: 5px 2px;
+        height: 50px;
+        font-size: 20px;
+        box-shadow: 2px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="calculator">
+      <h1 class="heading">Calculater</h1>
+      <input type="text" id="display" readonly />
+      <div class="buttonContainer">
+        <button
+          class="buttonClass"
+          onclick="currentValue+= '+';
+        document.querySelector('#display').value = currentValue;"
+        >
+          +
+        </button>
+        <button
+          class="buttonClass"
+          onclick="currentValue+= '*';
+        document.querySelector('#display').value = currentValue;"
+        >
+          *
+        </button>
+        <button
+          class="buttonClass"
+          onclick="currentValue+= '/';
+        document.querySelector('#display').value = currentValue;"
+        >
+          /
+        </button>
+        <button
+          class="buttonClass"
+          onclick="
+          let result=eval(currentValue);
+          currentValue=result;
+        document.querySelector('#display').value = currentValue;"
+        >
+          =
+        </button>
+        <button
+          class="buttonClass"
+          onclick="currentValue+= '-';
+        document.querySelector('#display').value = currentValue;"
+        >
+          -
+        </button>
+        <button
+          class="buttonClass"
+          onclick="currentValue+= '9';
+        document.querySelector('#display').value = currentValue;"
+        >
+          9
+        </button>
+        <button
+          class="buttonClass"
+          onclick="currentValue+= '8';
+        document.querySelector('#display').value = currentValue;"
+        >
+          8
+        </button>
+        <button
+          class="buttonClass"
+          onclick="currentValue+= '7';
+        document.querySelector('#display').value = currentValue;"
+        >
+          7
+        </button>
+        <button
+          class="buttonClass"
+          onclick="currentValue= '';
+        document.querySelector('#display').value = currentValue;"
+        >
+          C
+        </button>
+        <button
+          class="buttonClass"
+          onclick="currentValue+= '6';
+        document.querySelector('#display').value = currentValue;"
+        >
+          6
+        </button>
+        <button
+          class="buttonClass"
+          onclick="currentValue+= '5';
+        document.querySelector('#display').value = currentValue;"
+        >
+          5
+        </button>
+        <button
+          class="buttonClass"
+          onclick="currentValue+= '4';
+        document.querySelector('#display').value = currentValue;"
+        >
+          4
+        </button>
+        <button
+          class="buttonClass"
+          onclick="currentValue+= '0';
+        document.querySelector('#display').value = currentValue;"
+        >
+          0
+        </button>
+        <button
+          class="buttonClass"
+          onclick="currentValue+= '3';
+        document.querySelector('#display').value = currentValue;"
+        >
+          3
+        </button>
+        <button
+          class="buttonClass"
+          onclick="currentValue+= '2';
+        document.querySelector('#display').value = currentValue;"
+        >
+          2
+        </button>
+        <button
+          class="buttonClass"
+          onclick="currentValue+= '1';
+        document.querySelector('#display').value = currentValue;"
+        >
+          1
+        </button>
+      </div>
+    </div>
+    <script>
+      let currentValue = "";
+      document.querySelector("#display").value = currentValue; //input fields ke liye humko .value ka udse kerna hoga aur paragraph aur heading ke liuye humko .innerHtml,.innerText
+    </script>
+  </body>
+</html>
